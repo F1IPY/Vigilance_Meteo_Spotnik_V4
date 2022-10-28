@@ -90,13 +90,9 @@ aux lignes 126 à 133:
                 # not ordered
  
                 for type_risque in sorted(self.alerts_list.keys()):
- 
                     if self.alerts_list[type_risque] != "Vert":
- 
-                        message = format( 
- 
+                        message = format(
                            type_risque
- 
                         )
  
 </code>
