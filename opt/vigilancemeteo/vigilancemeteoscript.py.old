@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+import vigilancemeteo
+
+zone = vigilancemeteo.DepartmentWeatherAlert('78')
+
+couleur = zone.department_color
+ 
+text = zone.summary_message('text')
+
+fichier = open("/tmp/meteocouleur", "w")
+fichier.write(couleur)
+fichier.close()
+fichier = open("/tmp/meteoalert", "w")
+fichier.write(text)
+fichier.close()
+
