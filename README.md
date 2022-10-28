@@ -152,12 +152,14 @@ Il faut donc activer l'annonce "short annonce" du HotSpot dans le fichier svxlin
 
 nano /etc/spotnik/svxlink.cfg
 Dans la section  [SimplexLogic]
+
 <code>
 SHORT_IDENT_INTERVAL=30
 </code>
 
 Et indiquer le nom du fichier dans le fichier Logic.tcl
 nano /usr/share/svxlink/events.d/local/Logic.tcl
+
 <code>
 variable short_announce_file    "/usr/share/svxlink/sounds/fr_FR/RRF/ShortAnnonce.wav";
 </code>
