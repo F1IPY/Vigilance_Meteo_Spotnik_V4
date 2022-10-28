@@ -66,24 +66,36 @@ Le format du texte retourné n'étant pas approprié pour notre utilisation nous
 nano /usr/local/lib/python2.7/dist-packages/vigilancemeteo/department_weather_alert.py
 
 aux lignes 126 à 133:
-                 message = "Alerte météo {} en cours :".format(self.department_color)
+
+<code>
+                message = "Alerte météo {} en cours :".format(self.department_color)
+ 
                 # Order the dictionary keys because before python 3.6 keys are
                 # not ordered
+ 
                 for type_risque in sorted(self.alerts_list.keys()):
                     if self.alerts_list[type_risque] != "Vert":
-                        message = message + "\n - {}: {}".format(
+                            message = message + "\n - {}: {}".format(
                             type_risque, self.alerts_list[type_risque]
                         )
-remplacez les par
+ 
+</code>
 
+ remplacez les par
+ 
+<code>
         # message = "Alerte météo {} en cours :".format(self.department_color)
+ 
                 # Order the dictionary keys because before python 3.6 keys are
                 # not ordered
+ 
                 for type_risque in sorted(self.alerts_list.keys()):
                     if self.alerts_list[type_risque] != "Vert":
                         message = format(
                            type_risque
                         )
+ 
+</code>
 
 Ce qui va avoir pour effet de modifier la sortie texte avec uniquement les informations utiles.
 Ce qui donne pour le département 64:
@@ -118,19 +130,31 @@ Il faut maintenant exécuter ce fichier de manière automatique toutes les heure
 pour ce faire nous ajoutons la ligne suivante dans le fichier crontab:
 nano /etc/crontab
 
+<code>
 ## Vigilance Météo
+ 
 00 0-23 * * * root /opt/vigilancemeteo/vigilancemeteoscript.sh
+</code> 
+
 Activation de l'annonce
 J'ai fais le choix d'annoncer la vigilance météo (uniquement quand il y en a une) toutes les 30 minutes
 Il faut donc activer l'annonce "short annonce" du HotSpot dans le fichier svxlink.cfg
 
 nano /etc/spotnik/svxlink.cfg
 Dans la section  [SimplexLogic]
- SHORT_IDENT_INTERVAL=30
+
+<code>
+SHORT_IDENT_INTERVAL=30
+
+</code>
+
 
 Et indiquer le nom du fichier dans le fichier Logic.tcl
 nano /usr/share/svxlink/events.d/local/Logic.tcl
+
+<code>
 variable short_announce_file    "/usr/share/svxlink/sounds/fr_FR/RRF/ShortAnnonce.wav";
+</code>
 
 Maintenant écouter votre hotspot !
 
