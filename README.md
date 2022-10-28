@@ -147,6 +147,7 @@ Dans la section  [SimplexLogic]
 SHORT_IDENT_INTERVAL=30
 </code>
 
+
 Et indiquer le nom du fichier dans le fichier Logic.tcl
 nano /usr/share/svxlink/events.d/local/Logic.tcl
 
