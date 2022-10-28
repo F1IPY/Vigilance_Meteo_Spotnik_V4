@@ -77,7 +77,7 @@ aux lignes 126 à 133:
                         )
 </code>
  remplacez les par
-
+<code>
         # message = "Alerte météo {} en cours :".format(self.department_color)
                 # Order the dictionary keys because before python 3.6 keys are
                 # not ordered
@@ -86,7 +86,7 @@ aux lignes 126 à 133:
                         message = format(
                            type_risque
                         )
-
+</code>
 Ce qui va avoir pour effet de modifier la sortie texte avec uniquement les informations utiles.
 Ce qui donne pour le département 64:
 root@uSvxCardV4:/opt/vigilancemeteo# python vigilancemeteoscript.py 64
