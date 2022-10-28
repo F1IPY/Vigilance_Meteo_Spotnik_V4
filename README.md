@@ -140,8 +140,11 @@ Il faut maintenant exécuter ce fichier de manière automatique toutes les heure
 pour ce faire nous ajoutons la ligne suivante dans le fichier crontab:
 nano /etc/crontab
 
+<code>
 ## Vigilance Météo
 00 0-23 * * * root /opt/vigilancemeteo/vigilancemeteoscript.sh
+</code> 
+
 Activation de l'annonce
 J'ai fais le choix d'annoncer la vigilance météo (uniquement quand il y en a une) toutes les 30 minutes
 Il faut donc activer l'annonce "short annonce" du HotSpot dans le fichier svxlink.cfg
