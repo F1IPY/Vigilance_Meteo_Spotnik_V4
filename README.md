@@ -66,6 +66,7 @@ Le format du texte retourné n'étant pas approprié pour notre utilisation nous
 nano /usr/local/lib/python2.7/dist-packages/vigilancemeteo/department_weather_alert.py
 
 aux lignes 126 à 133:
+<code>
                  message = "Alerte météo {} en cours :".format(self.department_color)
                 # Order the dictionary keys because before python 3.6 keys are
                 # not ordered
@@ -74,7 +75,8 @@ aux lignes 126 à 133:
                         message = message + "\n - {}: {}".format(
                             type_risque, self.alerts_list[type_risque]
                         )
-remplacez les par
+</code>
+ remplacez les par
 
         # message = "Alerte météo {} en cours :".format(self.department_color)
                 # Order the dictionary keys because before python 3.6 keys are
