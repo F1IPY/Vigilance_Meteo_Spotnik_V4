@@ -89,7 +89,7 @@ aux lignes 126 à 133:
  remplacez les par
  
 <code>
-        # message = "Alerte météo {} en cours :".format(self.department_color) </br>
+        # message = "Alerte météo {} en cours :".format(self.department_color) \n
                 # Order the dictionary keys because before python 3.6 keys are </br>
                 # not ordered </br>
                 for type_risque in sorted(self.alerts_list.keys()): </br>
