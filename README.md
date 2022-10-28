@@ -145,6 +145,7 @@ Dans la section  [SimplexLogic]
 
 <code>
 SHORT_IDENT_INTERVAL=30
+
 </code>
 
 
