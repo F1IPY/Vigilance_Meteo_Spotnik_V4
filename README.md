@@ -68,7 +68,7 @@ nano /usr/local/lib/python2.7/dist-packages/vigilancemeteo/department_weather_al
 aux lignes 126 à 133:
 
 <code>
-                 message = "Alerte météo {} en cours :".format(self.department_color)
+                 message = "Alerte météo {} en cours :".format(self.department_color) </hr>
                 # Order the dictionary keys because before python 3.6 keys are
                 # not ordered
                 for type_risque in sorted(self.alerts_list.keys()):
