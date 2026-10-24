@@ -1,9 +1,12 @@
 # Vigilance_Meteo_Spotnik_V4
  Vigilance Météo sur Spotnik V4
  
- Je vous partage  l'intégration de la diffusion d'un message de vigilance météo sur Sponik V4.
+Je vous partage  l'intégration de la diffusion d'un message de vigilance météo sur Sponik V4.
+
+24/10/2026 Nouvelle version du Script python qui utilise directement l'API Météo France. Le script est à compléter ^pour s'intégrer parfaitement...
 
 Je me suis inspiré de l'article de Frédéric (F4IJC) sur le site Vigilance météo & svxlink – F6KEX. La solution qu'il propose n'étant pas particulièrement adaptée pour un Spotnik, j'ai cherché une autre manière de faire.
+
 
 Attention:
 Cette manipulation doit être effectuée par les OM ayant un minimum de connaissance sur Linux !
@@ -18,17 +21,6 @@ Connexion en SSH sur le spotnik en Root
 Tapez les commandes suivantes:
 apt-get update --allow-releaseinfo-change
 apt-get upgrade
-
-Installation du package VigilanceMeteo (disponible sur GitHub: https://github.com/oncleben31/vigilancemeteo)
-installer les dépendances
-Tapez les commandes suivantes:
-apt-get install libxslt1.1
-apt-get install libxslt1-dev
-apt-get install libxml2
-apt-get install libxml2-dev
-
-Puis les scripts python
-python -m pip install vigilancemeteo
 
 Creation du fichier Python
 Nous allons maintenant créer le script qui va nous permettre de vérifier le fonctionnement
